@@ -3,7 +3,7 @@ tmp
 media
 src/client
 src/snippet
-dist/client*
+dist/*.map
 gulpfile.js
 bower.json
 *.bak
