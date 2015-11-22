@@ -1,6 +1,8 @@
 .*
 tmp
 src
-dist/*.map
+dist/client*
 gulpfile.js
 bower.json
+*.bak
+test
