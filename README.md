@@ -155,7 +155,9 @@ Type: `Object`
 
 |Options|Type|Default|
 |-------|----|-------|
+|id|String||
 |commit|Boolean|true|
+|host|String|api.stkbn.com|
 |debug|Boolean|false|
 
 ###### options.identify
