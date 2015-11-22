@@ -1,0 +1,6 @@
+.*
+tmp
+src
+dist/*.map
+gulpfile.js
+bower.json
