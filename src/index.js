@@ -37,13 +37,14 @@ module.exports = {
         local_snippet = local_snippet.replace(/https:\/\/stkbn\.com\/js/, client);
         local_snippet = local_snippet.replace(/stackbin/, global);
 
-        if (options.config.id) {
-            local_snippet += `\n${global}("id",${JSON.stringify(options.config.id)});`;
-            delete options.config.id;
-        }
-
         if (options.config) {
             local_snippet += `\n${global}("config",${JSON.stringify(options.config)});`;
+
+            if (options.config.id) {
+                local_snippet += `\n${global}("id",${JSON.stringify(options.config.id)});`;
+                delete options.config.id;
+            }
+
         }
 
         if (options.tag) {
