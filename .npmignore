@@ -1,6 +1,8 @@
 .*
 tmp
-src
+media
+src/client
+src/snippet
 dist/client*
 gulpfile.js
 bower.json
