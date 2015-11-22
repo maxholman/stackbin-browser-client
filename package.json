@@ -1,6 +1,6 @@
 {
   "name": "stackbin-browser-client",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Browser based error reporting client for Stackbin",
   "main": "src/index.js",
   "repository": {
