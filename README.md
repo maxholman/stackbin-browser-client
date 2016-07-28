@@ -15,7 +15,7 @@ This is the browser based error reporting client for [Stackbin](https://stkbn.co
 - Full stack trace support
 - Sourcemaps support (CoffeeScript, uglify etc)
 - Timeline and user event analysis
-- Tagging of arbitrary data
+- Tagging of arbitrary customer data + debug information
 - Unique user identification
 - Code snippet generation and syntax highlighting
 - Slack integration
@@ -25,7 +25,7 @@ This is the browser based error reporting client for [Stackbin](https://stkbn.co
 ## Getting Started
 You will need access to a [Stackbin](https://stkbn.com) account and project.
 
-We're still in closed beta. Feel free to [ask if you want to try](mailto:help@stkbn.com)!
+We're still in closed beta. Feel free to [ask if you want to try](mailto:hello@stkbn.com)!
 
 
 ## Install
@@ -230,7 +230,7 @@ The absolute path to the collector library.
 
 We're glad to help with anything, no matter how small!
 
-[Get in touch](mailto:help@stkbn.com)
+[Get in touch](mailto:hello@stkbn.com)
 
 ### License
 
