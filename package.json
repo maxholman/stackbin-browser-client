@@ -81,5 +81,7 @@
     "email": "hello@stkbn.com"
   },
   "homepage": "https://github.com/stackbin/stackbin-browser-client#readme",
-  "dependencies": {}
+  "dependencies": {
+    "lodash.omit": "^4.4.0"
+  }
 }
