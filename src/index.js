@@ -1,6 +1,7 @@
 /* jshint browser:false, node: true, esnext: true */
 'use strict';
 
+var omit = require('lodash.omit');
 var fs = require('fs');
 var path = require('path');
 var crypto = require('crypto');
@@ -31,24 +32,25 @@ module.exports = {
 
         var client = options.client || 'https://stkbn.com/js';
         var global = options.global || 'stackbin';
+        var indent = options.indent || '';
 
         var local_snippet = snippet;
         local_snippet = local_snippet.replace(/,STACKBIN_ID/, id !== '' ? ',' + JSON.stringify(id) : '');  // can be empty
-        local_snippet = local_snippet.replace(/https:\/\/stkbn\.com\/js/, client);
-        local_snippet = local_snippet.replace(/stackbin/, global);
+        local_snippet = local_snippet.replace(/STACKBIN_HOST/, JSON.stringify(client));
+        local_snippet = local_snippet.replace(/STACKBIN_GLOBAL/, JSON.stringify(global));
+        local_snippet = local_snippet.replace(/(\n)([^$])/g, '$1' + indent + '$2');
 
         if (options.config) {
-            local_snippet += `\n${global}("config",${JSON.stringify(options.config)});`;
+            local_snippet += '\n' + indent + global + '("config",' + JSON.stringify(omit(options.config, 'id')) + ');';
 
             if (options.config.id) {
-                local_snippet += `\n${global}("id",${JSON.stringify(options.config.id)});`;
-                delete options.config.id;
+                local_snippet += '\n' + indent + global + '("id",' + JSON.stringify(options.config.id) + ');';
             }
 
         }
 
         if (options.tag) {
-            local_snippet += `\n${global}("tag",${JSON.stringify(options.tag)});`;
+            local_snippet += '\n' + indent + global + '("tag",' + JSON.stringify(options.tag) + ');';
         }
 
         return local_snippet;
