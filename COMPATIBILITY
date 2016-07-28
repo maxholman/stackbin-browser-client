@@ -1,0 +1,5 @@
+## Browser support
+
+- <IE8 is not supported due to technical reasons (having to use large clunky compat libs etc)
+- IE9 has no stack traces
+- IE9 does not support cross domain XHR properly (XDR without cookies)
