@@ -2,10 +2,10 @@
   "nonew": true,
   "latedef": true,
   "browser": true,
+  "node": true,
+  "globalstrict": true,
   "devel": true,
   "globals": {
-    "define": true,
-    "require": true,
     "DEBUG": true
   }
 }
